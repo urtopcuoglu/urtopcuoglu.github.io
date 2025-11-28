@@ -68,3 +68,21 @@ h1
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
 }
+/* Aynı şirket iki deneyim arasındaki çizgiyi gizle */
+.yfa-joined-top {
+    border-bottom: none !important;
+}
+
+/* Kesik dikey çizgi */
+.yfa-joined-bottom {
+    position: relative;
+}
+
+.yfa-joined-bottom::before {
+    content: "";
+    position: absolute;
+    left: -25px; /* timeline konumuna göre bu oranı değiştirebilirsin */
+    top: -15px;
+    height: 20px; /* iki blok arasındaki mesafe kadar */
+    border-left: 2px dashed #666; /* kesik çizgi */
+}
