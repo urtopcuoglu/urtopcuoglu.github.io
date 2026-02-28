@@ -46,6 +46,7 @@
 .socials-square__item
 
 .socials-square__link
+  position: relative
   width: 4.4rem
   height: 4.4rem
   color: var(--t-bright)
@@ -61,23 +62,21 @@
     transform: scale3d(1,1,1)
     will-change: transform
     transition: transform 0.3s var(--_animbezier)
+    z-index: -1
   i
-    display: block
+    display: inline-block
     position: relative
     line-height: 4.4rem
-    font-size: 1.8rem
-    color: var(--t-bright)
-    overflow: hidden
-    transition: .3s
+    font-size: 2rem
+    color: var(--t-bright) !important
+    z-index: 2
+    transition: color .3s, transform .3s
   +MQ(XL)
-    i
-      color: rgba(0,0,0,0.0)
-      text-shadow: 0 0 var(--t-bright), 0 4.4rem var(--t-bright)
     .no-touch &:hover
       &::before
         transform: scale3d(1.08,1.08,1.08)
       i
-        text-shadow: 0 -4.4rem var(--t-bright), 0 0 var(--t-bright)
+        transform: scale(1.1)
   +MQ(XXL)
     width: 5rem
     height: 5rem
@@ -85,9 +84,7 @@
       border-radius: 2.2rem
     i
       line-height: 5rem
-      font-size: 1.8rem
-      text-shadow: 0 0 var(--t-bright), 0 5rem var(--t-bright)
+      font-size: 2.2rem
     .no-touch &:hover
       i
-        text-shadow: 0 -5rem var(--t-bright), 0 0 var(--t-bright)
-    
+        transform: scale(1.1)
