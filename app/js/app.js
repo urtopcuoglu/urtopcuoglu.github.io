@@ -247,10 +247,8 @@ $(function() {
   // --------------------------------------------- //
   // Swiper Slider Start
   // --------------------------------------------- //
-  const toolsSlider = document.querySelector("tools-slider");
-  const testimonialsSlider = document.querySelector("testimonials-slider");
-
-  if (!toolsSlider) {
+  const toolsSliderEl = document.querySelector('.swiper-tools');
+  if (toolsSliderEl) {
     const swiper = new Swiper('.swiper-tools', {
       spaceBetween: 20,
       autoplay: {
@@ -284,7 +282,8 @@ $(function() {
     });
   };
 
-  if (!toolsSlider) {
+  const testimonialsSliderEl = document.querySelector('.swiper-testimonials');
+  if (testimonialsSliderEl) {
     const swiper = new Swiper('.swiper-testimonials', {
       slidesPerView: 1,
       spaceBetween: 20,
